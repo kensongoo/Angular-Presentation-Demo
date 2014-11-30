@@ -1,0 +1,9 @@
+.hotel-image {
+	background: url(../images/hotel.jpg) no-repeat;
+	background-size: contain;
+	height: 500px;
+}
+
+.reviewName {
+	font-style: italic;
+}
