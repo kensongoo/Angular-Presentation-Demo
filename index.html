@@ -9,13 +9,41 @@
 		<link rel="stylesheet" href="stylesheet/app.css">
 	</head>
 
-	<body ng-controller="ctrlReview">
+	<body>
 		<div class="container-fluid">
-		
+
+
+
+			<div class="row">
+				 <h1> {{ hotelName }} </h1>
+				 <section class="col-xs-6">
+					 <button class="btn btn-primary" ng-show="coupon"> {{ coupon }} </button>
+					 <div class="hotel-image"></div>
+				 </section>
+				 <section class="col-xs-6 reviewForm" ng-cloak>
+					 <h2> Reviews </h2>
+					 <p> {{ review }} </p>
+				 <footer class="reviewName"> {{ name }} </footer>
+				 <h2> Write a review </h2>
+				 <form role="form">
+					 <div class="form-group">
+						 <label> Name </label>
+						 <input class="form-control" type="text" ng-model="name">
+					 </div>
+					 <div class="form-group">
+						 <label> Review </label>
+						 <textarea class="form-control" ng-model="review"></textarea>
+					 </div>
+					 <div class="form-group">
+						 <button type="submit" class="btn btn-default" ng-click="submitReview($event)"> Submit </button>
+					 </div>
+				 </form>
+			 </section>	
+			</div>
 
 			<expedia-review hotel-name="Hotel Twilight"></expedia-review>
+			
 
-			<expedia-review hotel-name="Hotel Twilight 2"></expedia-review>
 		</div>
 
 		<script src="bower_components/angularjs/angular.min.js"></script>
